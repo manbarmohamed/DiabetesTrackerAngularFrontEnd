@@ -18,4 +18,8 @@ export class GlycemieService {
   public addGlycemie(glycemie:Glycemie){
     return this.http.post<Glycemie>(this.url+'save',glycemie)
   }
+
+  public delete(id:number){
+    return this.http.delete<Glycemie>(this.url+'delete/'+id)
+  }
 }

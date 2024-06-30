@@ -6,6 +6,7 @@
                 <th>id</th>
                 <th>Date</th>
                 <th>Level</th>
+                <th>Action</th>
 
             </tr>
         </thead>
@@ -17,6 +18,9 @@
                 <td>{{gl.id}}</td>
                 <td>{{gl.date}}</td>
                 <td>{{gl.level}}</td>
+                <td>
+                    <button type="button" class="btn btn-danger" (click)="delete(gl.id)">Delete</button>
+                </td>
             </tr>
             }
         </tbody>
