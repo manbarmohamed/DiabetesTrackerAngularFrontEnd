@@ -1,0 +1,45 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 15px;
+    font-family: Arial, sans-serif;
+    background-color: #ebf7f7;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.headline {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+.subheading {
+    font-size: 16px;
+    color: #777;
+    margin: 10px 0;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.icon {
+    font-size: 24px;
+}

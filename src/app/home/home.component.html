@@ -1,0 +1,31 @@
+<header>
+    <nav class="section__container nav__container">
+        <div class="nav__logo">Diabets<span>Care</span></div>
+        <ul class="nav__links">
+            <li class="link"><a [routerLink]="['/glycemie']">Home</a></li>
+            <li class="link"><a >About Us</a></li>
+            <li class="link"><a href="#gl">Glucose</a></li>
+        </ul>
+        <button class="btn">Contact Us</button>
+    </nav>
+    <div class="section__container header__container">
+        <div class="header__content">
+            <h1>Providing an Exceptional Patient Experience</h1>
+            <p>
+                Welcome, where exceptional patient experiences are our priority.
+                With compassionate care, state-of-the-art facilities, and a
+                patient-centered approach, we're dedicated to your well-being. Trust
+                us with your health and experience the difference.
+            </p>
+            <button class="btn" style="margin: 5px;">See Services</button>
+        </div>
+        <div class="header__form">
+            <form [formGroup]="glycemieForm" (ngSubmit)="hundelSubmit()">
+                <h4>Add New Glycemie</h4>
+                <input type="datetime-local" placeholder="Date And Time" formControlName="date" />
+                <input type="number" placeholder="Level" formControlName="level"/>
+                <button type="submit" class="btn form__btn">Add</button>
+            </form>
+        </div>
+    </div>
+</header>

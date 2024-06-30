@@ -1,0 +1,100 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 15px;
+    font-family: Arial, sans-serif;
+    background-color: #ebf7f7;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.headline {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+.subheading {
+    font-size: 16px;
+    color: #777;
+    margin: 10px 0;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.header__form {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .header__form form {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header__form input {
+    padding: 1rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: #12ac8e;
+    background-color: #e9f7f7;
+    border-radius: 5px;
+  }
+  
+  .header__form input::placeholder {
+    color: #12ac8e;
+  }
+  
+  .form__btn {
+    background-color: #12ac8e;
+    transition: 0.3s;
+  }
+  
+  .form__btn:hover {
+    background-color: #0d846c;
+  }
+  
+  .header__form h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #12ac8e;
+  }
+
+  .btn {
+    padding: 0.75rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    white-space: nowrap;
+    color: white;
+    background-color: #fb923c;
+    border-radius: 5px;
+    cursor: pointer;
+  }
