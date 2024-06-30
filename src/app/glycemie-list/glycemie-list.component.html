@@ -1,52 +1,16 @@
- <div class="container">
-   <h1>Premier League Players Stats - Goals</h1>
-    <table class="table table-hover">
-        <thead class="table-dark">
-            <tr>
-                <th>id</th>
-                <th>Date</th>
-                <th>Level</th>
-                <th>Action</th>
-
-            </tr>
-        </thead>
-
-        <tbody>
-
-            @for (gl of glycemies; track $index) {
-            <tr>
-                <td>{{gl.id}}</td>
-                <td>{{gl.date}}</td>
-                <td>{{gl.level}}</td>
-                <td>
-                    <button type="button" class="btn btn-danger" (click)="delete(gl.id)" onclick="window.location.reload()">Delete</button>
-                    <button type="button" class="btn btn-success" [routerLink]="['/update',gl.id]">Update</button>
-                </td>
-            </tr>
-            }
-        </tbody>
-    </table>
-
-
-
-
-
-    <button (click)="Show()">Show </button>
-    <div *ngIf="show">
-        <h1>form</h1>
-        <form [formGroup]="glycemieForm" (ngSubmit)="hundelSubmit()">
-        
-            <label>Date</label>
-            <input type="datetime-local" formControlName="date">
-        
-            <label>Level</label>
-            <input type="number" formControlName="level">
-        
-            <button type="submit" onclick="window.location.reload()">Submit</button>
-        </form>
+<h1 class="text-center" id="gl">All Glycemie</h1>
+<div class="card-container">
+    @for (gl of glycemies; track $index) {
+    <div class="card">
+        <h1 class="headline">Glucose Level: {{gl.level}}</h1>
+        <p class="subheading">Date: {{gl.date}}</p>
+        <div class="icons">
+            <a class="icon" (click)="delete(gl.id)" onclick="window.location.reload()"><i style="color: rgb(255, 97, 97);"
+                class="fa-solid fa-trash"></i></a>
+            <a class="icon" [routerLink]="['/update',gl.id]"><i style="color: rgb(97, 255, 97);"
+                class="fa-solid fa-pen-to-square"></i></a>
+        </div>
     </div>
-
-
-
-
+    }
 </div>
+
