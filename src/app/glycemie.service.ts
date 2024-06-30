@@ -22,4 +22,12 @@ export class GlycemieService {
   public delete(id:number){
     return this.http.delete<Glycemie>(this.url+'delete/'+id)
   }
+
+  public findById(id:number){
+    return this.http.get<Glycemie>(this.url+'findById/'+id)
+  }
+
+  public update(id:number, glycmie: Glycemie){
+    return this.http.put<Glycemie>(this.url+'update/'+id, glycmie)
+  }
 }

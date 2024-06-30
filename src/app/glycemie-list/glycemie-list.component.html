@@ -19,7 +19,8 @@
                 <td>{{gl.date}}</td>
                 <td>{{gl.level}}</td>
                 <td>
-                    <button type="button" class="btn btn-danger" (click)="delete(gl.id)">Delete</button>
+                    <button type="button" class="btn btn-danger" (click)="delete(gl.id)" onclick="window.location.reload()">Delete</button>
+                    <button type="button" class="btn btn-success" [routerLink]="['/update',gl.id]">Update</button>
                 </td>
             </tr>
             }
@@ -30,18 +31,20 @@
 
 
 
-
-    <h1>form</h1>
-    <form [formGroup]="glycemieForm" (ngSubmit)="hundelSubmit()">
-
-        <label>Date</label>
-        <input type="datetime-local" formControlName="date">
-
-        <label>Level</label>
-        <input type="number" formControlName="level">
-
-        <button type="submit">Submit</button>
-    </form>
+    <button (click)="Show()">Show </button>
+    <div *ngIf="show">
+        <h1>form</h1>
+        <form [formGroup]="glycemieForm" (ngSubmit)="hundelSubmit()">
+        
+            <label>Date</label>
+            <input type="datetime-local" formControlName="date">
+        
+            <label>Level</label>
+            <input type="number" formControlName="level">
+        
+            <button type="submit" onclick="window.location.reload()">Submit</button>
+        </form>
+    </div>
 
 
 
